@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: hashicorp/setup-terraform@v3
         with:
-         cli_config_credentials_token: ${{ TERRAFORM_SECRET_TOKEN }}
+         cli_config_credentials_token: ${{ secrets.TERRAFORM_SECRET_TOKEN }}
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
         with:
@@ -20,5 +20,5 @@ jobs:
       - name: Terraform Validate
         id: validate
         run: terraform validate
-        
+
       
