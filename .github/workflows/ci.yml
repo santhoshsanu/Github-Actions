@@ -17,6 +17,9 @@ jobs:
           aws-region: us-west-2
 
       - uses: actions/checkout@v4
+      - name: Terraform Init
+        id: init
+        run: terraform init
 
       
       - name: Terraform Init
